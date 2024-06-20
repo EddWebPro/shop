@@ -20,7 +20,7 @@ const showNothing = () => {
   );
 };
 
-export default function Header({ orders }) {
+export default function Header({ orders, onDelete }) {
   const [cartOpen, setCartOpen] = useState(false);
 
   return (
@@ -39,7 +39,7 @@ export default function Header({ orders }) {
 
         {cartOpen && (
           <div className='shop-cart'>
-            {orders.length > 0 ? showOrders({ orders }) : showNothing()}
+            {orders.length > 0 ? showOrders({ orders, onDelete }) : showNothing()}
           </div>
         )}
       </div>

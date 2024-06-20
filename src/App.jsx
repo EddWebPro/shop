@@ -71,12 +71,13 @@ const App = () => {
   const addToOrder = (item) => {
     let isInArray = false
     orders.forEach(el => {
-      if (el.id === item.id)
-        isInArray = true
+      if (el.id === item.id){
+         isInArray = true
+      }
     })
-    if(!isInArray)
-
-    setOrders([...orders, item]);
+    if(!isInArray){
+      setOrders([...orders, item]);
+    }
   };
   return (
     <>
